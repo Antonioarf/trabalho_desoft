@@ -6,7 +6,7 @@
 	Caroline Chaim
 
 
-## [Documentation](https://https://antonioarf.github.io/trabalho_desoft/ )
+## [Documentation](https://antonioarf.github.io/trabalho_desoft/ )
 
 <img src="src/Imagens/readme1.png" width="300">
 <img src="src/Imagens/readme2.png" width="300">

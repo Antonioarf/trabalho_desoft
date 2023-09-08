@@ -1,1 +1,4 @@
-site_name: My Docs
+site_name: Pitfall Docs
+site_url: https://antonioarf.github.io/trabalho_desoft/
+nav:
+  - Home: index.md
