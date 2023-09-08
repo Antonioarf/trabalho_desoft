@@ -80,8 +80,6 @@ class Player(pygame.sprite.Sprite):
                 # Se sim, tchau explosÃ£o!
                 self.currentimg=0
             self.image = self.images[self.currentimg]
-
-
                     
 # Classe Mob que representa os meteoros
 class HOLE(pygame.sprite.Sprite):
@@ -458,7 +456,7 @@ def load_assets(img_dir, snd_dir, fnt_dir):
     assets["bar_anim"]=bar_anim
     
     uni_anim = []
-    for i in range (10):
+    for i in range(10):
         filename = 'uni_{}.png'.format(i)
         img2 = pygame.image.load(path.join(img_dir,filename)).convert()
         img2 = pygame.transform.scale(img2, (80, 70))
@@ -466,7 +464,7 @@ def load_assets(img_dir, snd_dir, fnt_dir):
     assets["uni_anim"]=uni_anim
     
     back_anim = []
-    for i in range (2):
+    for i in range(2):
         filename = 'imagem {}.jpeg'.format(i)
         img1 = pygame.image.load(path.join(img_dir,filename)).convert()
         img1 = pygame.transform.scale(img1, (1000, 700))

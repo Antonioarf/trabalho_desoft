@@ -1,172 +1,226 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="None">
-        
-        <link rel="canonical" href="https://antonioarf.github.io/trabalho_desoft/">
-        <link rel="shortcut icon" href="img/favicon.ico">
-        <title>Pitfall Docs</title>
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/font-awesome.min.css" rel="stylesheet">
-        <link href="css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-        <script>hljs.highlightAll();</script> 
-    </head>
-
-    <body class="homepage">
-        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
-            <div class="container">
-                <a class="navbar-brand" href=".">Pitfall Docs</a>
-
-                <!-- Expanded navigation -->
-                <div id="navbar-collapse" class="navbar-collapse collapse">
-
-                    <ul class="nav navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> Search
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="row">
-                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
-            <span class="fa fa-angle-down"></span>
-        </button>
-    </div>
-
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" content="None" />
+      <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>Pitfall Docs</title>
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
-    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
-        <ul class="nav flex-column">
-            
-            <li class="nav-item" data-level="1"><a href="#pitfall" class="nav-link">Pitfall</a>
-              <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#pygame-documentation" class="nav-link">Pygame Documentation</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#commands" class="nav-link">Commands</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#project-layout" class="nav-link">Project layout</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-              </ul>
-            </li>
-        </ul>
-    </div>
-</div></div>
-                    <div class="col-md-9" role="main">
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Home";
+        var mkdocs_page_input_path = "index.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
 
-<h1 id="pitfall">Pitfall</h1>
-<h2 id="pygame-documentation">Pygame Documentation</h2>
-<p>For full documentation visit <a href="https://www.mkdocs.org">mkdocs.org</a>.</p>
-<h2 id="commands">Commands</h2>
-<ul>
-<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
-<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
-<li><code>mkdocs build</code> - Build the documentation site.</li>
-<li><code>mkdocs -h</code> - Print help message and exit.</li>
-</ul>
-<h2 id="project-layout">Project layout</h2>
-<pre><code>mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
-</code></pre></div>
-            </div>
-        </div>
+<body class="wy-body-for-nav" role="document">
 
-        <footer class="col-md-12">
-            <hr>
-            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
-        </footer>
-        <script src="js/jquery-3.6.0.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script>
-            var base_url = ".",
-                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
-        </script>
-        <script src="js/base.js"></script>
-        <script src="search/main.js"></script>
-
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="searchModalLabel">Search</h4>
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-            </div>
-            <div class="modal-body">
-                <p>From here you can search these documents. Enter your search terms below.</p>
-                <form>
-                    <div class="form-group">
-                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
-                    </div>
-                </form>
-                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
-    </div>
-</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-            </div>
-            <div class="modal-body">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th style="width: 20%;">Keys</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="help shortcut"><kbd>?</kbd></td>
-                    <td>Open this help</td>
-                  </tr>
-                  <tr>
-                    <td class="next shortcut"><kbd>n</kbd></td>
-                    <td>Next page</td>
-                  </tr>
-                  <tr>
-                    <td class="prev shortcut"><kbd>p</kbd></td>
-                    <td>Previous page</td>
-                  </tr>
-                  <tr>
-                    <td class="search shortcut"><kbd>s</kbd></td>
-                    <td>Search</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
-    </div>
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="." class="icon icon-home"> Pitfall Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
 </div>
+      </div>
 
-    </body>
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href=".">Home</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#pygame-documentation">Pygame Documentation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#files">Files</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#pitfallpy">Pitfall.py</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#configuracoespy">Configuracoes.py</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#classespy">Classes.py</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#telapy">Tela.py</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#credits">Credits</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href=".">Pitfall Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
+      <li class="breadcrumb-item active">Home</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="pitfall">Pitfall</h1>
+<h3 id="pygame-documentation">Pygame Documentation</h3>
+<p>To run the game, you need to have python 3 and the dependencies listed in the requirements.txt file installed.</p>
+<p>Command to install dependencies:
+<code>pip install -r requirements.txt</code></p>
+<p>Command to run the game:
+<code>python3 Pitfall.py</code></p>
+<p>Source code available <a href="https://github.com/Antonioarf/trabalho_desoft">publicly on GitHub</a></p>
+<h2 id="files">Files</h2>
+<p>On the <strong>src</strong> folder, you can find the following directories and files:</p>
+<p><strong>Fontes</strong>: Contains the necessary files to import the game's fonts.</p>
+<p><strong>Imagens</strong>: Contains the necessary files to import the game's sprites.</p>
+<p><strong>Sons</strong>: Contains the necessary files to import the game's sounds.</p>
+<h3 id="pitfallpy">Pitfall.py</h3>
+<p>This is the main file of the game. It contains the main loop and the game's initialization, as well dealing with events that kill the program and eventual crashes and errors.</p>
+<h3 id="configuracoespy">Configuracoes.py</h3>
+<p>This file contains the game's configurations, such as the screen's size, FPS, colors saved as constants, and manages the imports fo the the game's fonts, sounds and sprites as well as defining the initial state of the states machine for the game.</p>
+<h3 id="classespy">Classes.py</h3>
+<p>This defines the following classes:</p>
+<ol>
+<li>
+<p><em>Player</em></p>
+<p>This class creates the player object. It has two methods: init and update.<br />
+The init method loads the player's sprites and defines the shape for the colider.<br />
+The update method is responsible for the player's movement, and makes sure the player doesn't go off screen. Also inside the update method is the code to check if is time to change the player's image, and if it is, it changes it. No methods return anything.</p>
+</li>
+<li>
+<p><em>BARRIL</em></p>
+<p>This class creates the obstacles objects that the player must avoid. It has two methods: init and update.<br />
+The init method loads the obstacle asset and defines the shape for the colider.<br />
+The update method is responsible for the movement of the obstacle and for checking if it has reached the end of the screen, and if it has, it resets the obstacle to the beginning of the screen. Also inside the update method is the code to check if is time to change the obstacle's image, and if it is, it changes it. No methods return anything.</p>
+</li>
+<li>
+<p><em>UNIC</em></p>
+<p>This class works basicly the same as the BARRIL class, but it creates the obstacles with a random Y position and a different set os sprites.</p>
+</li>
+<li>
+<p><em>HOLE</em></p>
+<p>This class creates the holes objects that the player must jump over. It has two methods: init and update.<br />
+The init method loads the hole asset and defines the shape for the colider.<br />
+The update method is empty, since nether the position or the sprite changes, but is is necessary for the class to work because of the superclass. No methods return anything.</p>
+</li>
+<li>
+<p><em>Premio</em></p>
+<p>This class creates the collectables objects that the player can collect to gain points. It has two methods: init and update.<br />
+The init method treasure asset and defines the shape for the colider. The update method is empty, but is is necessary for the class to work because of the superclass. No methods return anything.</p>
+</li>
+<li>
+<p><em>LIVES</em></p>
+<p>This class defines the markers for the live count for the player. It has two methods: init and update.<br />
+The init method loads the initial live count (3) and the heart icon. The update method is empty, but is is necessary for the class to work because of the superclass. No methods return anything.</p>
+</li>
+<li>
+<p><em>PREMIO</em></p>
+<p>This class controls the game's score marker (it is not responsible for the points count, just to display it). It has two methods: init and update.<br />
+The init method loads the initial score (0) and the treasure icon. The update method is empty, but is is necessary for the class to work because of the superclass. No methods return anything.</p>
+</li>
+<li>
+<p><em>Back</em></p>
+<p>This class controls the background of the game. It has two methods: init and update.<br />
+The init method loads the first background image and scales it to the screen's size. The update method is called every frame, and it checks if the time to change the image has been reached, and if it has, it loads the next image and scales it to the screen's size. No methods return anything.</p>
+</li>
+<li>
+<p><em>load_assets</em></p>
+<p>This method loads the game's assets, by creating a dictionary with the sprites necessaries for objects from the classes above, and returns it. For assets that require animations on screen, the code creates a secondary list, with one object with each frame of the animation, and then adds it to the dictionary.</p>
+<pre><code>def load_assets(img_dir, snd_dir, fnt_dir):
+assets = {}
+...
+return assets
+</code></pre>
+</li>
+</ol>
+<h3 id="telapy">Tela.py</h3>
+<p>This file contains the following functions:</p>
+<ol>
+<li>
+<p><em>init_screen</em></p>
+<p>This function is responsible for creating all assets to be used (according to the <em>load_assets</em> function) and wait for the first input from the user to start the game. It returns a state variable for the gameover.</p>
+</li>
+<li>
+<p><em>game_screen</em></p>
+<p>This function is responsible for the game's main loop. It creates all the objects necessary for the game to run, and updates them every frame. It also checks for collisions between the player and the obstacles, and between the player and the collectables. It returns a state variable for the gameover and the score to be displayed.</p>
+</li>
+<li>
+<p><em>end_game</em> </p>
+<p>This function is responsible for displaying the gameover screen, and wait for the first input from the user to restart the game or kill the program. It returns a state variable for the gameover.</p>
+</li>
+</ol>
+<h2 id="credits">Credits</h2>
+<pre><code>Antonio Fonseca
+Gabriela Moreno Boriero
+Caroline Chaim
+</code></pre>
+<p>Game develop for "Desing de Software 2019.1" class at Insper, taught by professor Fabio Ayres.
+    The documentation was develop for "Desenvolvimento Open-Source 2023.2" class at Insper, taught by professor Igor Montagner.</p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = ".";</script>
+    <script src="js/theme_extra.js"></script>
+    <script src="js/theme.js"></script>
+      <script src="search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
 </html>
 
 <!--
 MkDocs version : 1.5.2
-Build Date UTC : 2023-09-08 19:17:14.991818+00:00
+Build Date UTC : 2023-09-08 23:39:30.858039+00:00
 -->
