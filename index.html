@@ -56,7 +56,7 @@
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#project-layout">Project layout</a>
+    <li class="toctree-l2"><a class="reference internal" href="#credits">Credits</a>
     </li>
     </ul>
                 </li>
@@ -91,6 +91,7 @@
 <code>pip install -r requirements.txt</code></p>
 <p>Command to run the game:
 <code>python3 Pitfall.py</code></p>
+<p>Source code available <a href="https://github.com/Antonioarf/trabalho_desoft">publicly on GitHub</a></p>
 <h2 id="files">Files</h2>
 <p>On the <strong>src</strong> folder, you can find the following directories and files:</p>
 <p><strong>Fontes</strong>: Contains the necessary files to import the game's fonts.</p>
@@ -104,49 +105,49 @@
 <p>This defines the following classes:</p>
 <ol>
 <li>
-<p><strong>Player</strong></p>
+<p><em>Player</em></p>
 <p>This class creates the player object. It has two methods: init and update.<br />
 The init method loads the player's sprites and defines the shape for the colider.<br />
-The update method is responsible for the player's movement, and for checking if the player has collided with an obstacle or a hole. If the player has collided with an obstacle, it loses a life and the obstacle is reset to the beginning of the screen. If the player has collided with a hole, it loses a life and the hole is reset to the beginning of the screen. Also inside the update method is the code to check if is time to change the player's image, and if it is, it changes it. No methods return anything.</p>
+The update method is responsible for the player's movement, and makes sure the player doesn't go off screen. Also inside the update method is the code to check if is time to change the player's image, and if it is, it changes it. No methods return anything.</p>
 </li>
 <li>
-<p><strong>BARRIL</strong></p>
+<p><em>BARRIL</em></p>
 <p>This class creates the obstacles objects that the player must avoid. It has two methods: init and update.<br />
 The init method loads the obstacle asset and defines the shape for the colider.<br />
 The update method is responsible for the movement of the obstacle and for checking if it has reached the end of the screen, and if it has, it resets the obstacle to the beginning of the screen. Also inside the update method is the code to check if is time to change the obstacle's image, and if it is, it changes it. No methods return anything.</p>
 </li>
 <li>
-<p><strong>UNIC</strong></p>
+<p><em>UNIC</em></p>
 <p>This class works basicly the same as the BARRIL class, but it creates the obstacles with a random Y position and a different set os sprites.</p>
 </li>
 <li>
-<p><strong>HOLE</strong></p>
+<p><em>HOLE</em></p>
 <p>This class creates the holes objects that the player must jump over. It has two methods: init and update.<br />
 The init method loads the hole asset and defines the shape for the colider.<br />
 The update method is empty, since nether the position or the sprite changes, but is is necessary for the class to work because of the superclass. No methods return anything.</p>
 </li>
 <li>
-<p><strong>Premio</strong></p>
+<p><em>Premio</em></p>
 <p>This class creates the collectables objects that the player can collect to gain points. It has two methods: init and update.<br />
 The init method treasure asset and defines the shape for the colider. The update method is empty, but is is necessary for the class to work because of the superclass. No methods return anything.</p>
 </li>
 <li>
-<p><strong>LIVES</strong></p>
+<p><em>LIVES</em></p>
 <p>This class defines the markers for the live count for the player. It has two methods: init and update.<br />
 The init method loads the initial live count (3) and the heart icon. The update method is empty, but is is necessary for the class to work because of the superclass. No methods return anything.</p>
 </li>
 <li>
-<p><strong>PREMIO</strong></p>
+<p><em>PREMIO</em></p>
 <p>This class controls the game's score marker (it is not responsible for the points count, just to display it). It has two methods: init and update.<br />
 The init method loads the initial score (0) and the treasure icon. The update method is empty, but is is necessary for the class to work because of the superclass. No methods return anything.</p>
 </li>
 <li>
-<p><strong>Back</strong></p>
+<p><em>Back</em></p>
 <p>This class controls the background of the game. It has two methods: init and update.<br />
 The init method loads the first background image and scales it to the screen's size. The update method is called every frame, and it checks if the time to change the image has been reached, and if it has, it loads the next image and scales it to the screen's size. No methods return anything.</p>
 </li>
 <li>
-<p><strong>load_assets</strong></p>
+<p><em>load_assets</em></p>
 <p>This method loads the game's assets, by creating a dictionary with the sprites necessaries for objects from the classes above, and returns it. For assets that require animations on screen, the code creates a secondary list, with one object with each frame of the animation, and then adds it to the dictionary.</p>
 <pre><code>def load_assets(img_dir, snd_dir, fnt_dir):
 assets = {}
@@ -156,12 +157,28 @@ return assets
 </li>
 </ol>
 <h3 id="telapy">Tela.py</h3>
-<h2 id="project-layout">Project layout</h2>
-<pre><code>mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
+<p>This file contains the following functions:</p>
+<ol>
+<li>
+<p><em>init_screen</em></p>
+<p>This function is responsible for creating all assets to be used (according to the <em>load_assets</em> function) and wait for the first input from the user to start the game. It returns a state variable for the gameover.</p>
+</li>
+<li>
+<p><em>game_screen</em></p>
+<p>This function is responsible for the game's main loop. It creates all the objects necessary for the game to run, and updates them every frame. It also checks for collisions between the player and the obstacles, and between the player and the collectables. It returns a state variable for the gameover and the score to be displayed.</p>
+</li>
+<li>
+<p><em>end_game</em> </p>
+<p>This function is responsible for displaying the gameover screen, and wait for the first input from the user to restart the game or kill the program. It returns a state variable for the gameover.</p>
+</li>
+</ol>
+<h2 id="credits">Credits</h2>
+<pre><code>Antonio Fonseca
+Gabriela Moreno Boriero
+Caroline Chaim
 </code></pre>
+<p>Game develop for "Desing de Software 2019.1" class at Insper, taught by professor Fabio Ayres.
+    The documentation was develop for "Desenvolvimento Open-Source 2023.2" class at Insper, taught by professor Igor Montagner.</p>
               
             </div>
           </div><footer>
@@ -205,5 +222,5 @@ docs/
 
 <!--
 MkDocs version : 1.5.2
-Build Date UTC : 2023-09-08 22:47:36.796910+00:00
+Build Date UTC : 2023-09-08 23:39:30.858039+00:00
 -->
