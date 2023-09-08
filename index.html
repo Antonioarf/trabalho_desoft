@@ -44,7 +44,17 @@
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#pygame-documentation">Pygame Documentation</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#commands">Commands</a>
+    <li class="toctree-l2"><a class="reference internal" href="#files">Files</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#pitfallpy">Pitfall.py</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#configuracoespy">Configuracoes.py</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#classespy">Classes.py</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#telapy">Tela.py</a>
+    </li>
+        </ul>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#project-layout">Project layout</a>
     </li>
@@ -75,15 +85,77 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="pitfall">Pitfall</h1>
-<h2 id="pygame-documentation">Pygame Documentation</h2>
-<p>For full documentation visit <a href="https://www.mkdocs.org">mkdocs.org</a>.</p>
-<h2 id="commands">Commands</h2>
-<ul>
-<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
-<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
-<li><code>mkdocs build</code> - Build the documentation site.</li>
-<li><code>mkdocs -h</code> - Print help message and exit.</li>
-</ul>
+<h3 id="pygame-documentation">Pygame Documentation</h3>
+<p>To run the game, you need to have python 3 and the dependencies listed in the requirements.txt file installed.</p>
+<p>Command to install dependencies:
+<code>pip install -r requirements.txt</code></p>
+<p>Command to run the game:
+<code>python3 Pitfall.py</code></p>
+<h2 id="files">Files</h2>
+<p>On the <strong>src</strong> folder, you can find the following directories and files:</p>
+<p><strong>Fontes</strong>: Contains the necessary files to import the game's fonts.</p>
+<p><strong>Imagens</strong>: Contains the necessary files to import the game's sprites.</p>
+<p><strong>Sons</strong>: Contains the necessary files to import the game's sounds.</p>
+<h3 id="pitfallpy">Pitfall.py</h3>
+<p>This is the main file of the game. It contains the main loop and the game's initialization, as well dealing with events that kill the program and eventual crashes and errors.</p>
+<h3 id="configuracoespy">Configuracoes.py</h3>
+<p>This file contains the game's configurations, such as the screen's size, FPS, colors saved as constants, and manages the imports fo the the game's fonts, sounds and sprites as well as defining the initial state of the states machine for the game.</p>
+<h3 id="classespy">Classes.py</h3>
+<p>This defines the following classes:</p>
+<ol>
+<li>
+<p><strong>Player</strong></p>
+<p>This class creates the player object. It has two methods: init and update.<br />
+The init method loads the player's sprites and defines the shape for the colider.<br />
+The update method is responsible for the player's movement, and for checking if the player has collided with an obstacle or a hole. If the player has collided with an obstacle, it loses a life and the obstacle is reset to the beginning of the screen. If the player has collided with a hole, it loses a life and the hole is reset to the beginning of the screen. Also inside the update method is the code to check if is time to change the player's image, and if it is, it changes it. No methods return anything.</p>
+</li>
+<li>
+<p><strong>BARRIL</strong></p>
+<p>This class creates the obstacles objects that the player must avoid. It has two methods: init and update.<br />
+The init method loads the obstacle asset and defines the shape for the colider.<br />
+The update method is responsible for the movement of the obstacle and for checking if it has reached the end of the screen, and if it has, it resets the obstacle to the beginning of the screen. Also inside the update method is the code to check if is time to change the obstacle's image, and if it is, it changes it. No methods return anything.</p>
+</li>
+<li>
+<p><strong>UNIC</strong></p>
+<p>This class works basicly the same as the BARRIL class, but it creates the obstacles with a random Y position and a different set os sprites.</p>
+</li>
+<li>
+<p><strong>HOLE</strong></p>
+<p>This class creates the holes objects that the player must jump over. It has two methods: init and update.<br />
+The init method loads the hole asset and defines the shape for the colider.<br />
+The update method is empty, since nether the position or the sprite changes, but is is necessary for the class to work because of the superclass. No methods return anything.</p>
+</li>
+<li>
+<p><strong>Premio</strong></p>
+<p>This class creates the collectables objects that the player can collect to gain points. It has two methods: init and update.<br />
+The init method treasure asset and defines the shape for the colider. The update method is empty, but is is necessary for the class to work because of the superclass. No methods return anything.</p>
+</li>
+<li>
+<p><strong>LIVES</strong></p>
+<p>This class defines the markers for the live count for the player. It has two methods: init and update.<br />
+The init method loads the initial live count (3) and the heart icon. The update method is empty, but is is necessary for the class to work because of the superclass. No methods return anything.</p>
+</li>
+<li>
+<p><strong>PREMIO</strong></p>
+<p>This class controls the game's score marker (it is not responsible for the points count, just to display it). It has two methods: init and update.<br />
+The init method loads the initial score (0) and the treasure icon. The update method is empty, but is is necessary for the class to work because of the superclass. No methods return anything.</p>
+</li>
+<li>
+<p><strong>Back</strong></p>
+<p>This class controls the background of the game. It has two methods: init and update.<br />
+The init method loads the first background image and scales it to the screen's size. The update method is called every frame, and it checks if the time to change the image has been reached, and if it has, it loads the next image and scales it to the screen's size. No methods return anything.</p>
+</li>
+<li>
+<p><strong>load_assets</strong></p>
+<p>This method loads the game's assets, by creating a dictionary with the sprites necessaries for objects from the classes above, and returns it. For assets that require animations on screen, the code creates a secondary list, with one object with each frame of the animation, and then adds it to the dictionary.</p>
+<pre><code>def load_assets(img_dir, snd_dir, fnt_dir):
+assets = {}
+...
+return assets
+</code></pre>
+</li>
+</ol>
+<h3 id="telapy">Tela.py</h3>
 <h2 id="project-layout">Project layout</h2>
 <pre><code>mkdocs.yml    # The configuration file.
 docs/
@@ -133,5 +205,5 @@ docs/
 
 <!--
 MkDocs version : 1.5.2
-Build Date UTC : 2023-09-08 19:26:59.337942+00:00
+Build Date UTC : 2023-09-08 22:47:36.796910+00:00
 -->
